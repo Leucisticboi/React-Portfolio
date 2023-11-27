@@ -21,9 +21,11 @@ This is a React.js-based portfolio site to let people know about my interests, s
 A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
 
 ## Deployed URL
-[LeucisticBoi's Portfolio]()
+[LeucisticBoi's Portfolio](https://milos-react-portfolio-e32321089e7c.herokuapp.com/)
 
 ## References
+
+GitHub Copilot was useful in figuring out my Heroku deployment issues. Heroku is always tricky but I'm starting to get the hang of it :)
 
 I used [Material Ui](https://mui.com/) for my CSS. The [documentation](https://mui.com/material-ui/getting-started/) was very useful for learning everything from simple component structure to creating my own theme.
 
