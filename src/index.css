@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.image-container {
+  margin: 5%;
+  width: 35%;
+}
+
+.portrait {
+  width: 100%;
+  object-fit: contain;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: #283618 !important;
+}
+
+h1 {
+  color: #283618 !important;
+}
+
+span {
+  color: #283618 !important;
+}
