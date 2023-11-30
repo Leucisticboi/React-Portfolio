@@ -6,7 +6,9 @@
 }
 
 .image-container {
-  margin: 5%;
+  margin-top: 5%;
+  margin-right: 2%;
+  margin-left: 2%;
   width: 35%;
 }
 
@@ -22,6 +24,7 @@
   justify-content: center;
   flex-wrap: wrap;
   color: #283618 !important;
+  margin-bottom: 8%;
 }
 
 h1 {

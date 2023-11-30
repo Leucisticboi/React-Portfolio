@@ -12,7 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { IoLogoReact } from "react-icons/io5";
 import { Link, useLocation } from 'react-router-dom';
 
-const pages = ['About', 'Projects', 'Resume', 'Contact'];
+const pages = ['About Me', 'Projects', 'Resume', 'Contact'];
 
 function NavBar() {
   const currentPage = useLocation().pathname;
@@ -28,7 +28,9 @@ function NavBar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="fixed" sx={{
+      maxHeight: '80px'
+    }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -42,7 +44,7 @@ function NavBar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: currentPage === '/' ? '#fefae0' : 'inherit',
+              color: '#fefae0',
               textDecoration: 'none',
             }}
           >
@@ -62,7 +64,7 @@ function NavBar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: currentPage === '/' ? '#fefae0' : 'inherit',
+              color: '#fefae0',
               textDecoration: 'none',
             }}
           >
@@ -75,7 +77,6 @@ function NavBar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
             >
               <MenuIcon />
             </IconButton>
@@ -100,22 +101,22 @@ function NavBar() {
               {pages.map((page) => (
                 <MenuItem key={page}
                 sx={{
-                  color: currentPage === `/${page.toLowerCase().replace(/\s/g, '')}` ? '#fefae0' : 'inherit',
+                  color: currentPage === `/${page.toLowerCase().split(' ')[0]}` ? '#fefae0' : 'inherit',
                   display: 'block',
                   textDecoration: 'none',
-                  background: currentPage === `/${page.toLowerCase().replace(/\s/g, '')}` ? '#283618' : 'transparent',
+                  background: currentPage === `/${page.toLowerCase().split(' ')[0]}` ? '#283618' : 'transparent',
                 }}
                 >
                   <Typography
                     textAlign="center"
                     component={Link}
-                    to={`/${page.toLowerCase().replace(/\s/g, '')}`}
+                    to={`/${page.toLowerCase().split(' ')[0]}`}
                     sx={{
                       my: 2,
-                      color: currentPage === `/${page.toLowerCase().replace(/\s/g, '')}` ? '#fefae0' : 'inherit',
+                      color: currentPage === `/${page.toLowerCase().split(' ')[0]}` ? '#fefae0' : 'inherit',
                       display: 'block',
                       textDecoration: 'none',
-                      background: currentPage === `/${page.toLowerCase().replace(/\s/g, '')}` ? '#283618' : 'transparent',
+                      background: currentPage === `/${page.toLowerCase().split(' ')[0]}` ? '#283618' : 'transparent',
                     }}
                   >
                     {page}
@@ -130,13 +131,13 @@ function NavBar() {
               <Button
                 key={page}
                 component={Link}
-                to={`/${page.toLowerCase().replace(/\s/g, '')}`}
+                to={`/${page.toLowerCase().split(' ')[0]}`}
                 sx={{
                   my: 2,
-                  color: currentPage === `/${page.toLowerCase().replace(/\s/g, '')}` ? '283618' : 'inherit',
+                  color: currentPage === `/${page.toLowerCase().split(' ')[0]}` ? '283618' : '#fefae0',
                   display: 'block',
                   textDecoration: 'none',
-                  background: currentPage === `/${page.toLowerCase().replace(/\s/g, '')}` ? '#fefae0' : 'transparent',
+                  background: currentPage === `/${page.toLowerCase().split(' ')[0]}` ? '#fefae0' : 'transparent',
                 }}
               >
                 {page}

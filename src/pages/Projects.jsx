@@ -2,13 +2,51 @@ import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
-import ListSubheader from '@mui/material/ListSubheader';
 import IconButton from '@mui/material/IconButton';
-import LinkIcon from '@mui/icons-material/Link';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+
+const itemData = [
+  {
+    img: '/Tech_Blog.png',
+    title: 'Tech Blog',
+    skills: 'JavaScript, Handlebars, CSS, MySQL, Sequelize, Express, Node.js',
+    link: 'https://milos-tech-blog-8d2ab6a0e819.herokuapp.com/',
+  },
+  {
+    img: '/Note_Taker.png',
+    title: 'Note Taker',
+    skills: 'JavaScript, Handlebars, CSS, Express, Node.js',
+    link: 'https://blooming-fortress-38068-298d76c80f65.herokuapp.com/notes',
+  },
+  {
+    img: '/Doodle_Duel.png',
+    title: 'Doodle Duel',
+    skills: 'JavaScript, Handlebars, CSS, SCSS',
+    link: 'https://doodle-duel-p2-32e9f10a2b67.herokuapp.com/login',
+  },
+  {
+    img: '/Social_API.png',
+    title: 'Social Media API',
+    skills: 'JavaScript, Node.js, Express, MongoDB, Mongoose, Insomnia',
+    link: 'https://github.com/Leucisticboi/Social-Media-API',
+  },
+  {
+    img: '/E_Commerce.png',
+    title: 'E-Commerce Backend',
+    skills: 'JavaScript, Node.js, Dotenv, Express, MySQL, Sequelize, Insomnia',
+    link: 'https://github.com/Leucisticboi/E-Commerce-Back-End'
+  },
+  {
+    img: 'Work_Scheduler.png',
+    title: 'Work Day Scheduler',
+    skills: 'JavaScript, Bootstrap, CSS',
+    link: 'https://leucisticboi.github.io/WorkScheduler/'
+  }
+];
 
 export default function Projects() {
   return (
-    <ImageList sx={{ width: '100%', my: 2, padding: 2 }}>
+    <ImageList sx={{ width: '100%', paddingTop: '90px', paddingBottom: '90px' }}>
       {itemData.map((item) => (
         <ImageListItem
           key={item.img}
@@ -23,20 +61,21 @@ export default function Projects() {
             component="a"
             href={item.link}
             title={item.title}
-            subtitle={item.languages}
+            subtitle={item.skills}
             actionIcon={
               <IconButton
                 component="a"
                 href={item.link}
                 sx={{ 
                   color: 'rgba(255, 255, 255, 0.54)',
+                  background: 'transparent',
                   '&:hover': {
                     color: '#fefae0',
                   },
                 }}
                 aria-label={`info about ${item.title}`}
               >
-                <LinkIcon />
+                <OpenInNewIcon />
               </IconButton>
             }
           />
@@ -45,32 +84,3 @@ export default function Projects() {
     </ImageList>
   );
 }
-
-const itemData = [
-  {
-    img: '/Tech_Blog.png',
-    title: 'Tech Blog',
-    languages: 'JavaScript, Handlebars, CSS, MySQL, Sequelize, Express, Node.js',
-    link: 'https://milos-tech-blog-8d2ab6a0e819.herokuapp.com/',
-    featured: true,
-  },
-  {
-    img: '/Note_Taker.png',
-    title: 'Note Taker',
-    languages: 'JavaScript, Handlebars, CSS, Express, Node.js',
-    link: 'https://blooming-fortress-38068-298d76c80f65.herokuapp.com/notes',
-  },
-  {
-    img: '/Doodle_Duel.png',
-    title: 'Tech Blog',
-    languages: 'JavaScript, Handlebars, CSS, SCSS',
-    link: 'https://doodle-duel-p2-32e9f10a2b67.herokuapp.com/login',
-  },
-  {
-    img: '/Social_API.png',
-    title: 'Social Media API',
-    languages: 'JavaScript, Node.js, Express, MongoDB, Mongoose, Insomnia',
-    link: 'https://drive.google.com/file/d/1BZ303hBUg0yYeSPuCiRjtribBJOze6A4/view',
-    featured: true,
-  },
-];

@@ -103,6 +103,18 @@ theme = createTheme(theme, {
         },
       }
     },
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          color: theme.palette.text.third,
+          backgroundColor: theme.palette.primary.main,
+          '&:hover': {
+            color: theme.palette.text.third,
+            backgroundColor: theme.palette.text.main
+          }
+        },
+      }
+    },
   }
 });
 

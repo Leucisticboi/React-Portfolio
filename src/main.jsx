@@ -40,6 +40,12 @@ const router = createBrowserRouter([
   },
 ]);
 
+const initialPath = '/about';
+if (window.location.pathname === '/') {
+  window.history.replaceState(null, '', initialPath);
+  router.navigate(initialPath)
+}
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <RouterProvider router={router} />
 )
