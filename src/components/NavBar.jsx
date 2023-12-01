@@ -117,6 +117,7 @@ function NavBar() {
                       textDecoration: 'none',
                       background: currentPage === `/${page.toLowerCase().split(' ')[0]}` ? '#283618' : 'transparent',
                     }}
+                    onClick={handleCloseNavMenu}
                   >
                     {page}
                   </Typography>
