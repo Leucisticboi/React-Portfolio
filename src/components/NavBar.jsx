@@ -112,7 +112,6 @@ function NavBar() {
                     component={Link}
                     to={`/${page.toLowerCase().split(' ')[0]}`}
                     sx={{
-                      my: 2,
                       color: currentPage === `/${page.toLowerCase().split(' ')[0]}` ? '#fefae0' : 'inherit',
                       display: 'block',
                       textDecoration: 'none',
@@ -133,7 +132,6 @@ function NavBar() {
                 component={Link}
                 to={`/${page.toLowerCase().split(' ')[0]}`}
                 sx={{
-                  my: 2,
                   color: currentPage === `/${page.toLowerCase().split(' ')[0]}` ? '283618' : '#fefae0',
                   display: 'block',
                   textDecoration: 'none',

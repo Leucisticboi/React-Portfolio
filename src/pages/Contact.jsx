@@ -35,6 +35,7 @@ export default function Contact() {
       }}
       autoComplete="off"
       sx={{
+        my: 5,
         padding: "10%",
         width: '100%',
         display: "flex",
