@@ -27,6 +27,9 @@ A short and simple permissive license with conditions only requiring preservatio
 ## Deployed URL
 [LeucisticBoi's Portfolio](https://milos-react-portfolio-e32321089e7c.herokuapp.com/)
 
+# Screenshot
+![Screenshot](./public/Portfolio_Screenshot.png)
+
 ## References
 
 GitHub Copilot was useful in debugging my Heroku deployment issues. Heroku is always tricky but I'm starting to get the hang of it :)
