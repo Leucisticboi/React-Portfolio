@@ -2,7 +2,7 @@ import {
   AppBar,
   Toolbar,
   IconButton,
-  Container,
+  Container
 } from '@mui/material';
 import ToolTip from '@mui/material/Tooltip';
 import {
@@ -67,18 +67,20 @@ const settings = [
 
 export default function Footer() {
   return (
-    <AppBar position="fixed" sx={{ 
-      maxHeight: '80px',
-      top: "auto",
-      bottom: 0,
-      marginTop: "2rem" 
-      }}
+    <AppBar position="fixed" sx={{
+      maxHeight: 'auto',
+      alignSelf: 'center',
+      top: 'auto',
+      bottom: 10,
+      borderRadius: '15px',
+      width: { xs: '98%', sm: '90%', md: '90%', lg: '60%', xl: '40%' },
+    }}
     >
-      <Container maxWidth="xl">
-        <Toolbar disableGutters sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+      <Container maxWidth="xl" sx={{ margin: 'auto' }}>
+        <Toolbar disableGutters sx={{ display: 'flex', justifyContent: 'space-evenly' }}>
 
-            {settings.map((setting) => (
-              <ToolTip key={setting.title} title={setting.title} arrow>
+          {settings.map((setting) => (
+            <ToolTip key={setting.title} title={setting.title} arrow>
               <IconButton
                 component="a"
                 href={setting.url}
@@ -86,8 +88,8 @@ export default function Footer() {
                 {setting.icon}
               </IconButton>
             </ToolTip>
-            ))}
-              
+          ))}
+
         </Toolbar>
       </Container>
     </AppBar>

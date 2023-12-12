@@ -29,10 +29,14 @@ function NavBar() {
 
   return (
     <AppBar position="fixed" sx={{
-      maxHeight: '80px'
+      maxHeight: '80px',
+      alignSelf: 'center',
+      borderRadius: '15px',
+      width: { xs: '98%', sm:'98%', md: '98%' },
+      top: '10px'
     }}>
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar disableGutters sx={{ justifyContent: 'space-evenly' }}>
           <Typography
             variant="h6"
             noWrap
@@ -40,7 +44,7 @@ function NavBar() {
             to="/"
             sx={{
               mr: 2,
-              display: { xs: 'none', md: 'flex', flexDirection: 'row', alignItems: 'center' },
+              display: { xs: 'none', sm: 'none', md: 'flex', flexDirection: 'row', alignItems: 'center' },
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
@@ -101,10 +105,10 @@ function NavBar() {
               {pages.map((page) => (
                 <MenuItem key={page}
                 sx={{
-                  color: currentPage === `/${page.toLowerCase().split(' ')[0]}` ? '#fefae0' : 'inherit',
+                  color: currentPage === `/${page.toLowerCase().split(' ')[0]}` ? '#bc6c25' : 'inherit',
                   display: 'block',
                   textDecoration: 'none',
-                  background: currentPage === `/${page.toLowerCase().split(' ')[0]}` ? '#283618' : 'transparent',
+                  background: currentPage === `/${page.toLowerCase().split(' ')[0]}` ? '#dda15e' : 'transparent',
                 }}
                 >
                   <Typography
@@ -115,7 +119,7 @@ function NavBar() {
                       color: currentPage === `/${page.toLowerCase().split(' ')[0]}` ? '#fefae0' : 'inherit',
                       display: 'block',
                       textDecoration: 'none',
-                      background: currentPage === `/${page.toLowerCase().split(' ')[0]}` ? '#283618' : 'transparent',
+                      background: currentPage === `/${page.toLowerCase().split(' ')[0]}` ? '#dda15e' : 'transparent',
                     }}
                     onClick={handleCloseNavMenu}
                   >
@@ -133,7 +137,7 @@ function NavBar() {
                 component={Link}
                 to={`/${page.toLowerCase().split(' ')[0]}`}
                 sx={{
-                  color: currentPage === `/${page.toLowerCase().split(' ')[0]}` ? '283618' : '#fefae0',
+                  color: currentPage === `/${page.toLowerCase().split(' ')[0]}` ? '#bc6c25' : '#fefae0',
                   display: 'block',
                   textDecoration: 'none',
                   background: currentPage === `/${page.toLowerCase().split(' ')[0]}` ? '#fefae0' : 'transparent',

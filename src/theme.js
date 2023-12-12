@@ -14,7 +14,8 @@ let theme = createTheme({
       default: '#fefae0'
     },
     secondary: {
-      main: '#dda15e'
+      main: '#dda15e',
+      darker: '#bc6c25'
     },
     error: {
       main: '#bc6c25'
@@ -51,6 +52,25 @@ theme = createTheme(theme, {
         body: {
           backgroundColor: theme.palette.background.default,
           color: theme.palette.text.main,
+          margin: 0,
+          padding: 0
+        }
+      }
+    },
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          left: 'auto',
+          right: 'auto',
+          backgroundColor: theme.palette.secondary.darker
+        }
+      }
+    },
+    MuiImageListItemBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: theme.palette.text.main,
+          borderRadius: '15px'
         }
       }
     },
@@ -61,14 +81,14 @@ theme = createTheme(theme, {
           backgroundColor: theme.palette.primary.main,
           '&:hover': {
             color: theme.palette.text.third,
-            backgroundColor: theme.palette.text.main
+            backgroundColor: theme.palette.secondary.main
           }
         },
         contained: {
           color: theme.palette.text.third,
           backgroundColor: theme.palette.primary.main,
           '&:hover': {
-            backgroundColor: theme.palette.text.main
+            backgroundColor: theme.palette.secondary.main
           }
         },
       }
@@ -106,11 +126,11 @@ theme = createTheme(theme, {
     MuiIconButton: {
       styleOverrides: {
         root: {
-          color: theme.palette.text.third,
-          backgroundColor: theme.palette.primary.main,
+          color: theme.palette.secondary.darker,
+          backgroundColor: theme.palette.secondary.main,
           '&:hover': {
             color: theme.palette.text.third,
-            backgroundColor: theme.palette.text.main
+            backgroundColor: theme.palette.text.secondary
           }
         },
       }
