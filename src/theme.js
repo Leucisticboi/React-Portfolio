@@ -69,7 +69,7 @@ theme = createTheme(theme, {
     MuiImageListItemBar: {
       styleOverrides: {
         root: {
-          backgroundColor: theme.palette.text.main,
+          backgroundColor: theme.palette.secondary.main,
           borderRadius: '15px'
         }
       }

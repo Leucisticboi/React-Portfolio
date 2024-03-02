@@ -57,7 +57,7 @@ export default function Projects() {
       {itemData.map((item) => (
         <ImageListItem
           key={item.img}
-          sx={{ margin: '10px', borderRadius: '15px' }}
+          sx={{ margin: '10px', borderRadius: '15px'}}
           elevation={0}
         >
           <img
@@ -71,6 +71,7 @@ export default function Projects() {
             href={item.link}
             title={item.title}
             subtitle={item.skills}
+            sx={{ border: '10px solid #bc6c25', borderTop: '0px', borderRight: '0px'}}
             actionIcon={
               <>
                 <IconButton
